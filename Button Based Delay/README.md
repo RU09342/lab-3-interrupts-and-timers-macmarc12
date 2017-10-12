@@ -10,3 +10,21 @@ What is a piece of electronics without a reset button? Instead of relying on res
 
 ## Button Based Hertz
 Most likely using two buttons, what if instead of making a delay loop based on the time, the user could instead enter a mode where the number of times they pressed the button would become the number in Hz of the blinking rate? How do you think you would implement that with just one button?
+This section combines the last two. We will be using a timer to increase our LED blink speed, while also using buttons and interrupts to delay it.
+
+## Getting Started
+This section will consist of functions used in the last two, including:
+```c
+void timerstart(int f) 
+{
+```
+and
+```c
+#pragma vector = TIMER0_A0_VECTOR
+__interrupt void TIMER_A(void)
+{
+```
+
+### Acknowledgement
+I had some trouble with this section so I used the resources of the internet and classmates to help fill in holes I had in my knowledge and code.
+
